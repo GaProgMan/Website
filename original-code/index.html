@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>GaProgMan.com</title>
+	<link media="all" rel="stylesheet" type="text/css" href="http://dreamhost.com/wp-content/themes/dreamhost/style.css" />
+	<script type="text/javascript" src="./superSecretScript.js"></script>
+</head>
+<body id="domains">
+	<div class="w1">
+		<div class="w2">
+			<div id="wrapper">
+				<div id="header">
+				</div>
+				<div class="main" style="padding-bottom: 24px">
+					<h1>GaProgMan.com landing page</h1>
+					<div class="holder">
+						<div class="content">
+							<!-- Automatically re-direct to blog after 30 seconds -->
+						<!-- <meta http-equiv="refresh" content="30;url=http://blog.gaprogman.com/"> -->
+						<p>Code Links</p>
+						<canvas id="codeLinksCanvasGitHub" width="205" height="39" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<canvas id="codeLinksCanvasGists" width="205" height="39" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<P>Non-Code Links</P>
+						<canvas id="blogLinksNihon" width="205" height="39" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<canvas id="blogLinksEnglish" width="205" height="39" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<P>The above images are HTML5 canvases, they act as weblinks to the sites they describe.<br/>Each will open in a new browser window or tab.</P>						
+						<canvas id="canvasSuperSecretCanvas" width="553" height="50" style="solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<audio id="clickSound" autoplay="false" autobuffer="true"></audio>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Script to grab the GitHub image for the GitHub canvas-->
+	<script type="text/javascript">
+		var imgGitHub = new Image();
+		imgGitHub.src = 'Attachments/GitHub.png';
+		imgGitHub.onload = function() {
+			var _canvasContext = document.getElementById('codeLinksCanvasGitHub').getContext("2d");
+			if (_canvasContext != null){
+				_canvasContext.drawImage(imgGitHub, 0, 0);
+			}
+		};
+	</script>
+	
+	<!-- Script for capturing click on GitHub canvas -->
+	<script type="text/javascript">
+	
+		document.getElementById("codeLinksCanvasGitHub").onclick = function(e){
+			window.open('https://github.com/GaProgMan','_blank');
+		};
+	</script>
+	
+	<!-- Script to grab the Gists image for the Gists canvas-->
+	<script type="text/javascript">
+		var imgGists = new Image();
+		imgGists.src = 'Attachments/Gists.png';
+		imgGists.onload = function() {
+			var _canvasContext = document.getElementById('codeLinksCanvasGists').getContext("2d");
+			if (_canvasContext != null){
+				_canvasContext.drawImage(imgGists, 0, 0);
+			}
+		};
+	</script>
+	
+	<!-- Script for capturing click on Gists canvas -->
+	<script type="text/javascript">
+	
+		document.getElementById("codeLinksCanvasGists").onclick = function(e){
+			window.open('https://gist.github.com/GaProgMan', '_blank');
+		};
+	</script>
+	
+	<!-- Script to grab the Nihon image for the Nihon canvas-->
+	<script type="text/javascript">
+		var imgNihon = new Image();
+		imgNihon.src = 'Attachments/Nihon.png';
+		imgNihon.onload = function() {
+			var _canvasContext = document.getElementById('blogLinksNihon').getContext("2d");
+			if (_canvasContext != null){
+				_canvasContext.drawImage(imgNihon, 0, 0);
+			}
+		};
+	</script>
+	
+	<!-- Script for capturing click on Nihon canvas -->
+	<script type="text/javascript">
+	
+		document.getElementById("blogLinksNihon").onclick = function(e){
+			 window.open('http://nihon.gaprogman.com','_blank');
+		};
+	</script>
+	
+	<!-- Script to grab the Nihon image for the English canvas-->
+	<script type="text/javascript">
+		var imgEnglish = new Image();
+		imgEnglish.src = 'Attachments/English.png';
+		imgEnglish.onload = function() {
+			var _canvasContext = document.getElementById('blogLinksEnglish').getContext("2d");
+			if (_canvasContext != null){
+				_canvasContext.drawImage(imgEnglish, 0, 0);
+			}
+		};
+	</script>
+	
+	<!-- Script for capturing click on English canvas -->
+	<script type="text/javascript">
+	
+		document.getElementById("blogLinksEnglish").onclick = function(e){
+			 window.open('http://blog.gaprogman.com','_blank');
+		};
+	</script>
+	
+	<!-- Script for capturing click on superSecret canvas -->
+	<script type="text/javascript">
+	
+	<!-- when the canvas has been clicked on/in -->
+		document.getElementById("canvasSuperSecretCanvas").onclick = function(e){
+			<!-- check that the canvas has been filled with an image (in -->
+			<!-- this instance it will only have one specific image) -->
+			var _canvas = document.getElementById('canvasSuperSecretCanvas');
+			if(_canvas.innerHTML == "filled") {
+				<!-- get a handle to the audio element on the page -->
+				var clickSound = document.getElementById('clickSound');
+				<!-- get the audio file to play -->
+				clickSound = new Audio('Attachments/boom.mp3');
+				<!-- set up an event handler for when it has finished playing -->
+				clickSound.addEventListener("ended",function() {
+					<!-- force a refresh of the page -->
+					window.location.reload(1);
+					});
+				<!-- play the audio element -->
+				clickSound.play();
+
+			}
+		};
+	</script>
+	
+</body>
+<<footer>
+	<center><P>Unless otherwise stated, all code and resources copyright Jamie "GaProgMan" Taylor 2013 onwards</P>
+	<P>"Item Get" by Koji Kondo (from: The Legend of Zelda: Majora's Mask Original Soundtrack), Copyright Nintendo 2000 used via Fair Use. No copyright infringement was intended</P>
+	</center>
+</footer>
+</html>
