@@ -1,60 +1,71 @@
-<!-- GitHub canvas !-->
+// GitHub canvas
 var imgGitHub = new Image();
 imgGitHub.src = 'Attachments/GitHub.png';
-	imgGitHub.onload = function() {
-		var _canvasContext = document.getElementById('codeLinksCanvasGitHub').getContext("2d");
-		if (_canvasContext != null){
-			_canvasContext.drawImage(imgGitHub, 0, 0);
-		}
-	};
+imgGitHub.onload = function() {
+	$( "#codeLinksCanvasGitHub" ).getContext("2d").drawImage(imgGitHub, 0, 0);
+	// Javascript way of doing it 
+	//var _canvasContext = document.getElementById('codeLinksCanvasGitHub').getContext("2d");
+	//if (_canvasContext != null){
+	//	_canvasContext.drawImage(imgGitHub, 0, 0);
+	//}
+};
 	
 document.getElementById("codeLinksCanvasGitHub").onclick = function(e){
 	window.open('https://github.com/GaProgMan','_blank');
 };
 
-<!-- Gists canvas !-->
+// Gists canvas
 var imgGists = new Image();
-	imgGists.src = 'Attachments/Gists.png';
-	imgGists.onload = function() {
-		var _canvasContext = document.getElementById('codeLinksCanvasGists').getContext("2d");
-		if (_canvasContext != null){
-			_canvasContext.drawImage(imgGists, 0, 0);
-		}
-	};
+imgGists.src = 'Attachments/Gists.png';
+imgGists.onload = function() {
+	// jQuery way of doing it
+	$( "#codeLinksCanvasGists" ).getContext("2d").drawImage(imgGists, 0, 0);
+	// Javascript way of doing it
+	//var _canvasContext = document.getElementById('codeLinksCanvasGists').getContext("2d");
+	//if (_canvasContext != null){
+	//	_canvasContext.drawImage(imgGists, 0, 0);
+	//}
+};
 
 document.getElementById("codeLinksCanvasGists").onclick = function(e){
 	window.open('https://gist.github.com/GaProgMan', '_blank');
 };
 
-<!-- Japanese blog canvas !-->
+// Japanese blog canvas
 var imgNihon = new Image();
-	imgNihon.src = 'Attachments/Nihon.png';
-	imgNihon.onload = function() {
-		var _canvasContext = document.getElementById('blogLinksNihon').getContext("2d");
-		if (_canvasContext != null){
-			_canvasContext.drawImage(imgNihon, 0, 0);
-		}
-	};
+imgNihon.src = 'Attachments/Nihon.png';
+imgNihon.onload = function() {
+	// jQuery way of doing it
+	$( "#blogLinksNihon" ).getContext("2d").drawImage(imgNihon, 0, 0);
+	// Javascript way of doing it
+	//var _canvasContext = document.getElementById('blogLinksNihon').getContext("2d");
+	//if (_canvasContext != null){
+	//	_canvasContext.drawImage(imgNihon, 0, 0);
+	//}
+};
 
 document.getElementById("blogLinksNihon").onclick = function(e){
 	window.open('http://nihon.gaprogman.com','_blank');
 };
 
-<!-- English language blog -->
+// English language blog
 var imgEnglish = new Image();
-	imgEnglish.src = 'Attachments/English.png';
-	imgEnglish.onload = function() {
-		var _canvasContext = document.getElementById('blogLinksEnglish').getContext("2d");
-		if (_canvasContext != null){
-			_canvasContext.drawImage(imgEnglish, 0, 0);
-		}
-	};
+imgEnglish.src = 'Attachments/English.png';
+imgEnglish.onload = function() {
+	// jQuery way of doing it
+	$( "#blogLinksEnglish" ).getContext("2d").drawImage(imgEnglish, 0, 0);
+	// Javascript way of doing it
+	//var _canvasContext = document.getElementById('blogLinksEnglish').getContext("2d");
+	//if (_canvasContext != null){
+	//	_canvasContext.drawImage(imgEnglish, 0, 0);
+	//}
+};
 
 document.getElementById("blogLinksEnglish").onclick = function(e){
 	window.open('http://blog.gaprogman.com','_blank');
 }
 
-<!-- not so secret canvas -->
+// Not so secret canvas
 document.getElementById("canvasSuperSecretCanvas").onclick = function(e){
 	<!-- check that the canvas has been filled with an image (in -->
 	<!-- this instance it will only have one specific image) -->
