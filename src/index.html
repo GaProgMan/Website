@@ -15,12 +15,68 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.gaprogman.com"/>
     
+    <!-- style sheets-->
+    <!-- <link media="all" rel="stylesheet" type="text/css" href="http://dreamhost.com/wp-content/themes/dreamhost/style.css" /> -->
+    <!-- Latest compiled and minified Bootstrap CSS from cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     
 	<title>GaProgMan.com</title>
-	<link media="all" rel="stylesheet" type="text/css" href="http://dreamhost.com/wp-content/themes/dreamhost/style.css" />
+	
 </head>
 <body id="domains">
-	<div class="w1">
+    <!-- new code -->
+    <div id="wrap">
+        <div class="container">
+            <nav role="navigation" class="navbar navbar-inverse">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">GaProgMan.com</a>
+                </div>
+
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <!-- Blog drop down nav links -->
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Blogs <b class="caret"></b></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="http://blog.gaprogman.com" target="_blank">English</a></li>
+                                <li><a href="http://nihon.gaprogman.com" target="_blank">Japanese</a></li>
+                            </ul>
+                        </li>
+                        <!-- Social drop down nav links -->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Social <b class="caret"></b></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="https://twitter.com/GaProgMan" target="_blank">Twitter</a></li>
+                                <li><a href="https://plus.google.com/+JamieGaProgManTaylor" target="_blank">Google+</a></li>
+                                <li><a href="https://www.linkedin.com/profile/view?id=206090730" target="_blank">LinkedIn</a></li>
+                            </ul>
+                        </li>
+                        <!-- Project wiki drop down nav links -->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Projects <b class="caret"></b></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="http://wiki.gaprogman.com/index.php?title=Medico" target="_blank">Medico</a></li>
+                                <li><a href="http://wiki.gaprogman.com/index.php?title=NazeBesto" target="_blank">Naze Besto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- /new code -->
+    
+    <!-- old code -->
+		<div class="w1">
 		<div class="w2">
 			<div id="wrapper">
 				<div id="header">
@@ -44,20 +100,22 @@
 			</div>
 		</div>
 	</div>
-	
-	<!--	Load scripts last. That way there's content to display if they
-			take a long time to load										-->
-	<!-- jQuery from CDN -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" />
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" />
+    
+	<!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript from cdn -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	
 	<!-- site scripts: canvas stuff -->
 	<script type="text/javascript" src="./js/site.js" />
 	<!-- comment this script out for now <script type="text/javascript" src="./superSecretScript.js"></script> -->
+        
 </body>
+
 <footer>
 	<center><P>Unless otherwise stated, all code and resources copyright Jamie "GaProgMan" Taylor 2013 onwards</P>
 	<P>"Item Get" by Koji Kondo (from: The Legend of Zelda: Majora's Mask Original Soundtrack), Copyright Nintendo 2000 used via Fair Use. No copyright infringement was intended</P>
 	</center>
 </footer>
+
 </html>
