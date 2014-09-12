@@ -113,20 +113,20 @@ if (window.addEventListener) {
 				var imgGameLink = new Image();
 				imgGameLink.src = '../src/assets/game-link.png';
 				imgGameLink.onload = function () {
-					var canvas = $("#canvasSuperSecretCanvas")[0];
+					var canvas = $("#superSecretCanvas")[0];
 					var canvasContext = canvas.getContext("2d");
-					if (canvasContext != null){
+					if (canvasContext !== null) {
 						canvasContext.drawImage(imgGameLink, 0, 0, imgGameLink.width, imgGameLink.height);
 						canvas.innerHTML = "filled";
-                        canvas.onclick = function(e) {
+                        canvas.onclick = function (e) {
                             window.open('javascriptGame/test.html');
-                        }
+                        };
 					}
 				};
 			})();
             
             // and finally clean up the keys array
             keys = [];
-        };
+        }
     }, true);
-};
+}
