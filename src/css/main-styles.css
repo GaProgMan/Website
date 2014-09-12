@@ -35,6 +35,13 @@ body > .page-header {
         padding-top: 25px;
 }
 
+body > .centre {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;

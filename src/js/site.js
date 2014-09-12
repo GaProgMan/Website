@@ -1,4 +1,4 @@
-// GitHub canvas
+/*// GitHub canvas
 var imgGitHub = new Image();
 imgGitHub.src = 'Attachments/GitHub.png';
 imgGitHub.onload = function() {
@@ -83,4 +83,50 @@ document.getElementById("canvasSuperSecretCanvas").onclick = function(e){
 		<!-- play the audio element -->
 		clickSound.play();
 	}
-}
+}*/
+
+/***********************************************************************
+ * The following code is taken and adapted from this web page:
+ * http://mattkirman.com/2009/05/11/how-to-recreate-the-konami-code-in-javascript/
+ **********************************************************************/
+
+// check to make sure that the browser can handle window.addEventListener
+if (window.addEventListener) {
+    // create the keys and konami variables
+    var keys = [],
+        konami = "38,38,40,40,37,39,37,39,66,65";
+    
+    // bind the keydown event to the Konami function
+    window.addEventListener("keydown", function (e) {
+        // push the keycode to the 'keys' array
+        keys.push(e.keyCode);
+        
+        // and check to see if the user has entered the Konami code
+        if (keys.toString().indexOf(konami) >= 0) {
+
+            (function () {
+				// code in here will execute right away
+				// since the () at the end executes this (function(){})
+				// alert('Two Up, Two Down, Let-Right, Left-Right, B, A');
+				// The following image is an editted version of:
+				//   http://wallpaperswide.com/konami_code-wallpapers.html
+				var imgGameLink = new Image();
+				imgGameLink.src = '../src/assets/game-link.png';
+				imgGameLink.onload = function () {
+					var canvas = $("#canvasSuperSecretCanvas")[0];
+					var canvasContext = canvas.getContext("2d");
+					if (canvasContext != null){
+						canvasContext.drawImage(imgGameLink, 0, 0, imgGameLink.width, imgGameLink.height);
+						canvas.innerHTML = "filled";
+                        canvas.onclick = function(e) {
+                            window.open('javascriptGame/test.html');
+                        }
+					}
+				};
+			})();
+            
+            // and finally clean up the keys array
+            keys = [];
+        };
+    }, true);
+};
