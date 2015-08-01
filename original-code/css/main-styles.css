@@ -24,7 +24,7 @@ body {
 /* Not required for template or sticky footer method. */
 
 #main {
-  font-family: oxygen;
+  font-family: oxygen, sans-serif;
 }
 
 div.center {
